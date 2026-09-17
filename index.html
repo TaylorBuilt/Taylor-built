@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Taylor Built | Construction & Remodeling</title>
+<meta name="description" content="Taylor Built provides residential construction, remodeling, decks, flooring, tile, carpentry and repairs. Call or text for a free estimate.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="#top"><span>TAYLOR</span> BUILT<small>CONSTRUCTION & REMODELING</small></a>
+  <nav><a href="#services">Services</a><a href="#work">Our Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  <a class="btn small" href="tel:+16072069976">Call (607) 206-9976</a>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="shade"></div>
+  <div class="hero-content">
+    <p class="eyebrow">RESIDENTIAL CONSTRUCTION & REMODELING</p>
+    <h1>Built Right.<br>Built to Last.</h1>
+    <p>Quality craftsmanship for remodeling, decks, flooring, tile, carpentry, additions and home repairs.</p>
+    <div class="actions"><a class="btn" href="#contact">Request a Free Estimate</a><a class="btn outline" href="#work">View Our Work</a></div>
+  </div>
+</section>
+
+<section id="services" class="section">
+  <p class="eyebrow">WHAT WE DO</p><h2>Quality work, from repairs to full projects.</h2>
+  <div class="cards">
+    <article><h3>Decks & Exterior</h3><p>New decks, rebuilds, railings, stairs, porches and exterior improvements.</p></article>
+    <article><h3>Remodeling</h3><p>Interior renovations, repairs and room transformations with attention to the details.</p></article>
+    <article><h3>Bathrooms & Tile</h3><p>Tile floors, surrounds, backsplashes and bathroom upgrades.</p></article>
+    <article><h3>Flooring</h3><p>Hardwood, LVP, tile, floor replacement and subfloor repair.</p></article>
+    <article><h3>Additions & Framing</h3><p>Framing, additions, structural work and exterior build-outs.</p></article>
+    <article><h3>Custom Carpentry</h3><p>Built-ins, trim, finish carpentry and one-of-a-kind projects.</p></article>
+  </div>
+</section>
+
+<section id="work" class="section dark">
+  <p class="eyebrow">REAL TAYLOR BUILT PROJECTS</p><h2>Our Work</h2>
+  <p class="intro">No stock photos. These are actual projects we've worked on.</p>
+  <div class="gallery">
+    <figure><img src="assets/deck.jpeg" alt="Finished pressure-treated deck"><figcaption>Deck Construction</figcaption></figure>
+    <figure><img src="assets/addition.jpeg" alt="Addition framing project"><figcaption>Additions & Framing</figcaption></figure>
+    <figure><img src="assets/flooring.jpeg" alt="Finished flooring installation"><figcaption>Flooring</figcaption></figure>
+    <figure><img src="assets/tile.jpeg" alt="Tile project"><figcaption>Tile & Remodeling</figcaption></figure>
+    <figure><img src="assets/porch_after.jpeg" alt="Rebuilt covered porch"><figcaption>Porch Restoration</figcaption></figure>
+    <figure><img src="assets/carpentry.jpeg" alt="Custom built-in bunk beds"><figcaption>Custom Carpentry</figcaption></figure>
+  </div>
+</section>
+
+<section class="section before-after">
+  <div><p class="eyebrow">BEFORE & AFTER</p><h2>Covered Porch Restoration</h2><p>Removal of deteriorated porch materials, structural repair and a clean rebuild designed to preserve the character of the home.</p></div>
+  <div class="ba"><figure><img src="assets/porch_before.jpeg" alt="Porch before restoration"><figcaption>Before</figcaption></figure><figure><img src="assets/porch_after.jpeg" alt="Porch after restoration"><figcaption>After</figcaption></figure></div>
+</section>
+
+<section id="about" class="section about">
+  <div><p class="eyebrow">ABOUT TAYLOR BUILT</p><h2>Quality work without the runaround.</h2></div>
+  <p>Taylor Built provides residential construction and remodeling with an emphasis on quality workmanship, straightforward communication and doing the job right. From smaller repairs and upgrades to larger renovations and outdoor projects, every job gets hands-on attention to detail.</p>
+</section>
+
+<section id="contact" class="section contact">
+  <div>
+    <p class="eyebrow">LET'S TALK ABOUT YOUR PROJECT</p>
+    <h2>Request a Free Estimate</h2>
+    <p>Call, text or email George to tell us what you're looking to have done.</p>
+    <div class="contact-actions">
+      <a class="btn" href="tel:+16072069976">Call (607) 206-9976</a>
+      <a class="btn outline-dark" href="sms:+16072069976">Text Taylor Built</a>
+      <a class="email" href="mailto:George.TaylorBuilt@gmail.com?subject=Taylor%20Built%20Estimate%20Request">George.TaylorBuilt@gmail.com</a>
+    </div>
+  </div>
+  <form onsubmit="sendEstimate(event)">
+    <label>Name<input id="name" required></label>
+    <label>Phone<input id="phone" type="tel" required></label>
+    <label>Project Type<select id="type"><option>Remodeling</option><option>Deck / Exterior</option><option>Bathroom / Tile</option><option>Flooring</option><option>Addition / Framing</option><option>Carpentry</option><option>Repair / Other</option></select></label>
+    <label>Tell us about your project<textarea id="details" rows="5" required></textarea></label>
+    <button class="btn" type="submit">Email Estimate Request</button>
+    <small>This opens your email app with the project details filled in.</small>
+  </form>
+</section>
+</main>
+
+<footer><strong>TAYLOR BUILT</strong><span>Built Right. Built to Last.</span><span>© <span id="year"></span> Taylor Built</span></footer>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+function sendEstimate(e){
+ e.preventDefault();
+ const n=encodeURIComponent(document.getElementById('name').value);
+ const p=encodeURIComponent(document.getElementById('phone').value);
+ const t=encodeURIComponent(document.getElementById('type').value);
+ const d=encodeURIComponent(document.getElementById('details').value);
+ location.href=`mailto:George.TaylorBuilt@gmail.com?subject=Taylor%20Built%20Estimate%20Request&body=Name:%20${n}%0APhone:%20${p}%0AProject:%20${t}%0A%0AProject%20Details:%0A${d}`;
+}
+</script>
+</body></html>
