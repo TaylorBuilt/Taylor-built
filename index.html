@@ -4,12 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Taylor Built | Construction & Remodeling</title>
-<meta name="description" content="Taylor Built provides residential construction, remodeling, decks, flooring, tile, carpentry and repairs. Call or text for a free estimate.">
+<meta name="description" content="Taylor Built provides residential construction, remodeling, decks, kitchens, bathrooms, flooring, tile, carpentry and repairs. Call or text for a free estimate.">
+<link rel="icon" href="assets/tb-round-logo.jpg">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
-  <a class="brand" href="#top"><span>TAYLOR</span> BUILT<small>CONSTRUCTION & REMODELING</small></a>
+  <a class="brand brand-desktop" href="#top" aria-label="Taylor Built home">
+    <img src="assets/taylor-built-logo.jpg" alt="Taylor Built Construction & Remodeling">
+  </a>
+  <a class="brand brand-mobile" href="#top" aria-label="Taylor Built home">
+    <img src="assets/tb-round-logo.jpg" alt="Taylor Built">
+  </a>
   <nav><a href="#services">Services</a><a href="#work">Our Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
   <a class="btn small" href="tel:+16072069976">Call (607) 206-9976</a>
 </header>
@@ -30,8 +36,8 @@
   <div class="cards">
     <article><h3>Decks & Exterior</h3><p>New decks, rebuilds, railings, stairs, porches and exterior improvements.</p></article>
     <article><h3>Remodeling</h3><p>Interior renovations, repairs and room transformations with attention to the details.</p></article>
-    <article><h3>Bathrooms & Tile</h3><p>Tile floors, surrounds, backsplashes and bathroom upgrades.</p></article>
-    <article><h3>Flooring</h3><p>Hardwood, LVP, tile, floor replacement and subfloor repair.</p></article>
+    <article><h3>Bathrooms & Kitchens</h3><p>Bathroom and kitchen renovations, upgrades, fixtures, finishes and complete room transformations.</p></article>
+    <article><h3>Flooring & Tile</h3><p>Hardwood, LVP and tile installation, floor replacement, backsplashes and subfloor repair.</p></article>
     <article><h3>Additions & Framing</h3><p>Framing, additions, structural work and exterior build-outs.</p></article>
     <article><h3>Custom Carpentry</h3><p>Built-ins, trim, finish carpentry and one-of-a-kind projects.</p></article>
   </div>
@@ -43,8 +49,8 @@
   <div class="gallery">
     <figure><img src="assets/deck.jpeg" alt="Finished pressure-treated deck"><figcaption>Deck Construction</figcaption></figure>
     <figure><img src="assets/addition.jpeg" alt="Addition framing project"><figcaption>Additions & Framing</figcaption></figure>
-    <figure><img src="assets/flooring.jpeg" alt="Finished flooring installation"><figcaption>Flooring</figcaption></figure>
-    <figure><img src="assets/tile.jpeg" alt="Tile project"><figcaption>Tile & Remodeling</figcaption></figure>
+    <figure><img src="assets/flooring.jpeg" alt="Finished flooring installation"><figcaption>Flooring & Tile</figcaption></figure>
+    <figure><img src="assets/tile.jpeg" alt="Tile project"><figcaption>Bathrooms & Kitchens</figcaption></figure>
     <figure><img src="assets/porch_after.jpeg" alt="Rebuilt covered porch"><figcaption>Porch Restoration</figcaption></figure>
     <figure><img src="assets/carpentry.jpeg" alt="Custom built-in bunk beds"><figcaption>Custom Carpentry</figcaption></figure>
   </div>
@@ -74,7 +80,7 @@
   <form onsubmit="sendEstimate(event)">
     <label>Name<input id="name" required></label>
     <label>Phone<input id="phone" type="tel" required></label>
-    <label>Project Type<select id="type"><option>Remodeling</option><option>Deck / Exterior</option><option>Bathroom / Tile</option><option>Flooring</option><option>Addition / Framing</option><option>Carpentry</option><option>Repair / Other</option></select></label>
+    <label>Project Type<select id="type"><option>Remodeling</option><option>Deck / Exterior</option><option>Bathroom / Kitchen</option><option>Flooring / Tile</option><option>Addition / Framing</option><option>Carpentry</option><option>Repair / Other</option></select></label>
     <label>Tell us about your project<textarea id="details" rows="5" required></textarea></label>
     <button class="btn" type="submit">Email Estimate Request</button>
     <small>This opens your email app with the project details filled in.</small>
